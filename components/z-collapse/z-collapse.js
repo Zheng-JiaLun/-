@@ -1,133 +1,93 @@
-// components/z-collapse/z-collapse.js
-Page({
-
+//自定义 多级下拉组件
+Component({
   /**
-   * 页面的初始数据
-   */
-  data: {
-    questList: [{
-      questionType: '设备设施问题',
-      t:false,
-      questionContent:[
-        {
-          "questionId":"1",
-          "questionName":"投放点未实现密闭化标准桶改造...",
-          t:false,
-        },
-        {
-          "questionId":"2",
-          "questionName":"投放点未实现密闭化标准桶改造...",
-          t:false,
-        },
-        {
-          "questionId":"3",
-          "questionName":"投放点未实现密闭化标准桶改造...",
-          t:false,
-        },
-      ]
-    }],
-    originFiles: [
-      {
-        url: 'https://tdesign.gtimg.com/site/upload1.png',
-        name: 'uploaded1.png',
-        type: 'image',
-      },
-    ],
-    gridConfig: {
-      column: 4,
-      width: 150,
-      height: 150,
-    },
-    config: {
-      count: 1,
-    },
+  * 组件的属性列表
+  */
+ properties: {
+  questionList:{//数据列表
+    type:Array,
+    value:[]
   },
-  methods:{
-    handleSuccess(e) {
-      const { files } = e.detail;
-      this.setData({
-        originFiles: files,
-      });
-    },
-    handleRemove(e) {
-      const { index } = e.detail;
-      const { originFiles } = this.data;
-      originFiles.splice(index, 1);
-      this.setData({
-        originFiles,
-      });
-    },
+  questionImgShow:{//是否显示问题图片
+    type:Boolean,
+    value:true
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
+  questionImgBtnShow:{//是否显示问题图片删除按钮
+    type:Boolean,
+    value:true
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
+  rectificationImgShow:{//是否显示整改图片
+    type:Boolean,
+    value:true
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
+  rectificationImgBtnShow:{//是否显示整改图片删除按钮
+    type:Boolean,
+    value:true
   },
+  
+ },
+ /**
+  * 页面的初始数据
+  */
+ data: {
+   
+   originFiles: [
+     {
+       url: 'https://tdesign.gtimg.com/site/upload1.png',
+       name: 'uploaded1.png',
+       type: 'image',
+     },
+   ],
+   gridConfig: {
+     column: 3,
+     width: 150,
+     height: 150,
+   },
+   config: {
+     count: 1,
+   },
+ },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
+ methods:{
+  
+   handleSuccess(e) {
+     const { files } = e.detail;
+     this.setData({
+       originFiles: files,
+     });
+   },
+   handleRemove(e) {
+     const { index } = e.detail;
+     const { originFiles } = this.data;
+     originFiles.splice(index, 1);
+     this.setData({
+       originFiles,
+     });
+   },
+   // 折叠面板
+ panel(e) {
+   console.log()
+  this.data.questionList[e.currentTarget.dataset.index].t = !this.data.questionList[e.currentTarget.dataset.index].t
+  this.setData({
+    questionList:this.data.questionList
+  })
+  //向父组件发送信息
+  this.triggerEvent('tabHandle',555)
+},
+// 折叠面板
+panel2(e) {
+  console.log(e.currentTarget.dataset)
+  this.data.questionList[e.currentTarget.dataset.index1].questionContent[e.currentTarget.dataset.index].t = !this.data.questionList[e.currentTarget.dataset.index1].questionContent[e.currentTarget.dataset.index].t
+  this.setData({
+    questionList:this.data.questionList
+  })
+  
+},
+   
+ },
 
-  },
+ 
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
 
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
-  },
-  // 折叠面板
-  panel: function (e) {
-    this.data.questList[e.currentTarget.dataset.index].t = !this.data.questList[e.currentTarget.dataset.index].t
-    this.setData({
-      questList:this.data.questList
-    })
-    
-  },
-  // 折叠面板
-  panel2: function (e) {
-    console.log(e.currentTarget.dataset)
-    this.data.questList[e.currentTarget.dataset.index1].questionContent[e.currentTarget.dataset.index].t = !this.data.questList[e.currentTarget.dataset.index1].questionContent[e.currentTarget.dataset.index].t
-    this.setData({
-      questList:this.data.questList
-    })
-    
-  },
+ 
 })

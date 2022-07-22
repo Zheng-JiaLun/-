@@ -17,3 +17,32 @@ page {
   border-radius: 10rpx;
   overflow: hidden;
 }
+/*checkbox 整体大小  */
+checkbox ,radio {
+  width: 60rpx;
+  height: 60rpx;
+  
+}
+/*checkbox 选项框大小  */
+checkbox .wx-checkbox-input ,radio .wx-radio-input {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+}
+/*checkbox选中后样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked,radio .wx-radio-input.wx-radio-input-checked {
+  background: var(--themeColor);
+  border-color: var(--themeColor);
+}
+/*checkbox选中后图标样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before ,radio .wx-radio-input.wx-radio-input-checked::before {
+  width: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}

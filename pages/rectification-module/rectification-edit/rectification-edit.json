@@ -2,6 +2,5 @@
   "usingComponents": {
     "z-collapse":"../../../components/z-collapse/z-collapse"
   },
-  "navigationBarTitleText": "巡查修改"
-  
+  "navigationBarTitleText": "整改详情"
 }

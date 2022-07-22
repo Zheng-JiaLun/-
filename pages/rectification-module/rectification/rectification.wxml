@@ -1,4 +1,22 @@
 <!--pages/rectification-module/rectification/rectification.wxml  整改列表-->
 <view class="rectification">
-
+  <view class="screen-box box-shadow">
+    <text>未整改</text>
+    <text>待审核</text>
+    <text>已完成</text>
+    <!-- <text class="confirm">确定</text> -->
+  </view>
+  <view class="box">
+    <view class="item box-shadow" wx:for="{{list}}" wx:key="index" wx:for-index = "index" wx:for-item= 'item' data-id="{{item.ticketId}}" bindtap="intiMsg">
+      <!-- <wxs src="../../../utils/filter.wxs" module="filter" />
+      <text class="top-type">{{filter.filterType(item.ticketType) }}</text> -->
+      <view class="bottom">
+        <view class="left">
+          <text class="name">{{item.garbageCanName}}</text>
+          <text class="address">{{item.address}}</text>
+        </view>
+        <image src="../../../assets/right.png"></image>
+      </view>
+    </view>
+  </view>
 </view>

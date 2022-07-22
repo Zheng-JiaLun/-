@@ -1,26 +1,26 @@
-/* pages/inspection-module/inspection-edit/inspection-edit.wxss */
-.inspection-edit .item{
+
+.rectification-edit .item{
   margin: 20rpx;
   padding: 10rpx 0;
   background-color: #ffffff;
 }
-.inspection-edit{
+.rectification-edit{
   padding-bottom: 80rpx;
 }
-.inspection-edit .item .title{
+.rectification-edit .item .title{
   margin: 20rpx;
   padding-bottom: 10rpx;
   border-bottom: 1rpx solid #ebebeb;
   display: block;
 }
-.inspection-edit .item .title .desc{
+.rectification-edit .item .title .desc{
   color: #999999;
   font-size: 26rpx;
 }
-.inspection-edit .item .wrapper{
+.rectification-edit .item .wrapper{
   padding: 10rpx 20rpx;
 }
-.inspection-edit .item .radio-box{
+.rectification-edit .item .radio-box{
   display: flex;
   justify-content: space-between;
   align-items: center;

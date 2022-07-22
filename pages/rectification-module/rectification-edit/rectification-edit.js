@@ -1,4 +1,4 @@
-// pages/inspection-module/inspection-edit/inspection-edit.js
+
 Page({
   /**
    * 页面的初始数据

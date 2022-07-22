@@ -1,5 +1,5 @@
-<!--pages/inspection-module/inspection-edit/inspection-edit.wxml-->
-<view class="inspection-edit">
+<!--整改详情页-->
+<view class="rectification-edit">
   <!-- <view class="item box-shadow">
     <t-input placeholder="请输入巡查名称" label="slot">
       <text slot="label">

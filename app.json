@@ -1,17 +1,15 @@
 {
   "pages": [
-    "pages/rectification-module/rectification/rectification",
-    "pages/inspection-module/inspection-edit/inspection-edit",
-    "pages/delivery-point/delivery-edit/delivery-edit",
     "pages/inspection-module/inspection/inspection",
+    "pages/inspection-module/inspection-edit/inspection-edit",
     "pages/delivery-point/delivery-point/delivery-point",
+    "pages/rectification-module/rectification/rectification",
+    "pages/delivery-point/delivery-edit/delivery-edit",
     "pages/user-module/user-login/user-login",
     "pages/user-module/user/user",
-    
-    "components/z-collapse/z-collapse"
+    "pages/rectification-module/rectification-edit/rectification-edit"
   ],
   "usingComponents": {
-    "t-demo": "../../components/demo-block/index",
     "t-avatar": "tdesign-miniprogram/avatar/avatar",
     "t-avatar-group": "tdesign-miniprogram/avatar/avatar-group",
     "t-badge": "tdesign-miniprogram/badge/badge",
@@ -81,7 +79,7 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#f6f6f6",
     "backgroundColor": "#f6f6f6",
-    "navigationBarTitleText": "TDesign",
+    "navigationBarTitleText": "巡查整理",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

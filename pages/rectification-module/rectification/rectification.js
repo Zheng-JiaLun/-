@@ -1,11 +1,27 @@
 // pages/rectification-module/rectification/rectification.js
+//整改列表页
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    list:[
+      {
+        ticketId:'1',
+        garbageCanName:'2022年7月光明区垃圾分类',
+        garbageCanType:'小区',
+        address:'光明区',
+        ticketType:'1'
+      },
+      {
+        ticketId:'1',
+        garbageCanName:'2022年7月光明区垃圾分类',
+        garbageCanType:'小区',
+        address:'光明区',
+        ticketType:'1'
+      },
+    ]
   },
 
   /**
@@ -62,5 +78,10 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+  intiMsg(e){
+    wx.navigateTo({
+      url: '../rectification-edit/rectification-edit?id='+e.currentTarget.dataset.id,
+    })
   }
 })

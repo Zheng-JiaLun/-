@@ -1,0 +1,15 @@
+var filterType = function(n){
+  var str = ''
+  if(n == 1){
+    str = '待整改'
+  }else if(n == 2){
+    str = '待审核'
+  }else{
+    str = '已完成'
+  }
+
+  return str
+}
+module.exports = {
+  filterType:filterType
+}

@@ -20,14 +20,23 @@
 .delivery .box .item .left{
   display: flex;
   flex-direction: column;
+  width: 90%;
 }
 .delivery .box .item .name{
   font-size: 35rpx;
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow:ellipsis;
 }
 .delivery .box .item .msg{
   font-size: 28rpx;
   color: #999999;
   margin-right: 10rpx;
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow:ellipsis;
 }
 
 .delivery .btn-box{
@@ -39,4 +48,28 @@
 }
 .delivery .btn-box .btn-s{
   margin: 10rpx;
+}
+.delivery .screen-box{
+  background-color: #ffffff;
+  margin: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.delivery .screen-box text{
+  border: 1rpx solid #c4c4c4;
+  background-color: #eeeeee;
+  width: 45%;
+  margin: 15rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  color: #666666;
+  font-size: 28rpx;
+  line-height: 60rpx;
+
+}
+.delivery .screen-box .confirm{
+  color: #ffffff;
+  background-color: var(--themeColor);
+  border-color: var(--themeColor);
 }

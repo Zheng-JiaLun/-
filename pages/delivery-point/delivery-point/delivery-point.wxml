@@ -1,12 +1,19 @@
 <!--pages/delivery-point/delivery-point/delivery-point.wxml-->
 <view class="delivery">
+  <view class="screen-box box-shadow">
+    <text>所属区域</text>
+    <text>所属街道</text>
+    <text>投放类型</text>
+    <text class="confirm">确定</text>
+  </view>
   <view class="box">
     <view class="item"  wx:for="{{list}}" wx:key = 'index' wx:for-index = "index" wx:for-item= 'item' data-id="{{item.garbageCanId}}" bindtap="intiMsg">
         <view class="left">
           <text class="name">{{item.garbageCanName}}</text>
           <view class="msg-box">
-            <text class="msg">{{item.communityName}}</text>
-            <text class="msg">{{item.housingEstate}}</text>
+            <text class="msg">{{item.areaName}}</text>
+            <text class="msg">{{item.streetName}}</text>
+            <text class="msg">（{{item.garbageCanType}}）</text>
           </view>
         </view>
         <image src="../../../assets/right.png"></image>

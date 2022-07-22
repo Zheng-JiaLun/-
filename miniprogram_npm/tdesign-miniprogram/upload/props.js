@@ -1,4 +1,8 @@
 const props = {
+    deleteShow:{
+      type:Boolean,
+      value:true
+    },
     addContent: {
         type: String,
     },

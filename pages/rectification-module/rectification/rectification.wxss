@@ -1,1 +1,73 @@
 /* pages/rectification-module/rectification/rectification.wxss */
+.rectification .box .item{
+  background-color: #ffffff;
+  
+  padding: 20rpx 15rpx;
+  padding-bottom: 10rpx;
+  margin: 20rpx;
+  border-radius: 10rpx;
+}
+.rectification .box .item .top-type{
+  border-bottom: 1rpx solid #eeeeee;
+  display: block;
+  text-align: right;
+  padding-bottom: 10rpx;
+  font-size: 28rpx;
+  
+}
+.rectification .box .item .bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rectification .box .item .bottom .left{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 20rpx 0;
+}
+.rectification .box .item .bottom .left .name{
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow:ellipsis;
+  line-height: 50rpx;
+}
+.rectification .box .item .bottom .left .address{
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow:ellipsis;
+  color: #999999;
+  font-size: 28rpx;
+}
+.rectification .box .item .bottom image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.rectification .screen-box{
+  background-color: #ffffff;
+  margin: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20rpx;
+}
+.rectification .screen-box text{
+  border: 1rpx solid #c4c4c4;
+  background-color: #eeeeee;
+  width: 30%;
+  margin: 15rpx 0;
+  text-align: center;
+  border-radius: 10rpx;
+  color: #666666;
+  font-size: 28rpx;
+  line-height: 60rpx;
+
+}
+.rectification .screen-box .confirm{
+  color: #ffffff;
+  background-color: var(--themeColor);
+  border-color: var(--themeColor);
+}
