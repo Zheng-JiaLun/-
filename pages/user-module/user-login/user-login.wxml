@@ -1,0 +1,20 @@
+<!--pages/user-module/user-login.wxml-->
+<view class="user-login">
+    <view class="box">
+      <text class="title">登录</text>
+      <t-input label="账号" model:value="{{userName}}" type="text" placeholder="请输入账号"
+       />
+      <t-input label="密码" model:value="{{passWord}}"  type="password" placeholder="请输入密码"
+       />
+      <view class="remember">
+        <checkbox-group bindchange="checkboxChange">
+          <checkbox value="1" model:checked="{{value}}"  color="#0052d9" />
+        </checkbox-group>
+        <!-- <t-switch model:default-value="{{value}}" slot="note" /> -->
+        <text>记住密码</text>
+      </view>
+      
+      <view class="btn-s" bindtap="userLogin">用户登录</view>
+    </view>
+    <t-toast id="t-toast" />
+</view>

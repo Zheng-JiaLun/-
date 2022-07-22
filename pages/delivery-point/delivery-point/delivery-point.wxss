@@ -1,0 +1,42 @@
+/* pages/delivery-point/delivery-point/delivery-point.wxss */
+/* .delivery{}
+.delivery .box{} */
+.delivery .box .item{
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 15rpx;
+  padding-bottom: 10rpx;
+  margin: 10rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 0 5px #d6d6d6;
+}
+
+.delivery .box .item  image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.delivery .box .item .left{
+  display: flex;
+  flex-direction: column;
+}
+.delivery .box .item .name{
+  font-size: 35rpx;
+}
+.delivery .box .item .msg{
+  font-size: 28rpx;
+  color: #999999;
+  margin-right: 10rpx;
+}
+
+.delivery .btn-box{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+}
+.delivery .btn-box .btn-s{
+  margin: 10rpx;
+}

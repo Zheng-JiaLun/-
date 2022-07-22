@@ -1,0 +1,91 @@
+/* pages/inspection-module/inspection/inspection.wxss */
+.inspection{
+  height: 100%;
+  padding-bottom: 80rpx;
+}
+
+.inspection .box .item{
+  margin: 20rpx;
+  background-color: #ffffff;
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inspection .box .item .left{
+  display: flex;
+  flex-direction: column;
+  width: 88%;
+}
+.inspection .box .item image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.inspection .box .item .name{
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow:ellipsis;
+  font-size: 30rpx;
+  margin-bottom: 10rpx;
+}
+.inspection .box .item .address{
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow:ellipsis;
+  font-size: 25rpx;
+  color: #999999;
+}
+.inspection .statistics{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  margin: 20rpx;
+}
+.inspection .statistics .item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+  height: 120rpx;
+  font-size: 28rpx;
+}
+.inspection .statistics .item .blue{
+  color: var(--themeColor);
+}
+.inspection .screen-box{
+  background-color: #ffffff;
+  margin: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.inspection .screen-box text{
+  border: 1rpx solid #c4c4c4;
+  background-color: #eeeeee;
+  width: 45%;
+  margin: 15rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  color: #666666;
+  font-size: 28rpx;
+  line-height: 60rpx;
+
+}
+.inspection .screen-box .confirm{
+  color: #ffffff;
+  background-color: var(--themeColor);
+  border-color: var(--themeColor);
+}
+.inspection .btn-box{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.inspection .btn-box .btn-s{
+  margin: 10rpx;
+}

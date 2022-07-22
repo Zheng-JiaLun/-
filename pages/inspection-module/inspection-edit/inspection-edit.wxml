@@ -1,0 +1,91 @@
+<!--pages/inspection-module/inspection-edit/inspection-edit.wxml-->
+<view class="inspection-edit">
+  <!-- <view class="item box-shadow">
+    <t-input placeholder="请输入巡查名称" label="slot">
+      <text slot="label">
+        <text style="color: #e34d59">*</text>巡查名称
+      </text>
+    </t-input>
+  </view> -->
+  <view class="item box-shadow">
+    <picker bindchange="bindPickerChange" mode="selector" value="{{index}}" range="{{PatrolObject}}">
+      <t-input placeholder="请选择巡查对象" disabled="{{true}}" label="slot">
+        <text slot="label">
+          <text style="color: #e34d59">*</text>巡查对象
+        </text>
+      </t-input>
+    </picker>
+  </view>
+  <view class="item box-shadow">
+    <picker bindchange="bindPickerChange" mode="selector" value="{{index}}" range="{{PatrolObject}}">
+      <t-input placeholder="请选择所属区域" disabled="{{true}}" label="slot">
+        <text slot="label">
+          <text style="color: #e34d59">*</text>所属区域
+        </text>
+      </t-input>
+    </picker>
+  </view>
+  <view class="item box-shadow">
+    <picker bindchange="bindPickerChange" mode="selector" value="{{index}}" range="{{PatrolObject}}">
+      <t-input placeholder="请选择所属街道" disabled="{{true}}" label="slot">
+        <text slot="label">
+          <text style="color: #e34d59">*</text>所属街道
+        </text>
+      </t-input>
+    </picker>
+  </view>
+  <view class="item box-shadow">
+    <picker bindchange="bindPickerChange" mode="selector" value="{{index}}" range="{{PatrolObject}}">
+      <t-input placeholder="请选择所属社区" disabled="{{true}}" label="slot">
+        <text slot="label">
+          <text style="color: #e34d59">*</text>所属社区
+        </text>
+      </t-input>
+    </picker>
+  </view>
+  <view class="item box-shadow">
+    <picker bindchange="bindPickerChange" mode="selector" value="{{index}}" range="{{PatrolObject}}">
+      <t-input placeholder="请选择所属小区" disabled="{{true}}" label="slot">
+        <text slot="label">
+          <text style="color: #e34d59">*</text>所属小区
+        </text>
+      </t-input>
+    </picker>
+  </view>
+  <view class="item box-shadow">
+    <picker bindchange="bindPickerChange" mode="selector" value="{{index}}" range="{{PatrolObject}}">
+      <t-input placeholder="请选择投放点" disabled="{{true}}" label="slot">
+        <text slot="label">
+          <text style="color: #e34d59">*</text>投放点
+        </text>
+      </t-input>
+    </picker>
+  </view>
+  <view class="item box-shadow">
+    <z-collapse></z-collapse>
+  </view>
+  <view class="item box-shadow">
+    <view class="title">
+      巡查记录图片
+      <text class="desc">（无问题时,上传巡查图片）</text>
+    </view>
+    <view class="wrapper">
+        <t-upload
+          mediaType="{{['video','image']}}"
+          files="{{originFiles}}"
+          gridConfig="{{gridConfig}}"
+          config="{{config}}"
+          bind:success="handleSuccess"
+          bind:remove="handleRemove"
+        >
+          <t-icon name="add" size="40rpx" color="rgba(0,0,0,0.26)" />
+        </t-upload>
+      </view>
+  </view>
+  <view class="item box-shadow">
+    <t-textarea name="备注" label="备注" placeholder="请输入备注" />
+  </view>
+  <view class="btn-s">
+    提交
+  </view>
+</view>

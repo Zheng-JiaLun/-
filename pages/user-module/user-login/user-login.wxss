@@ -1,0 +1,50 @@
+/* pages/user-module/user-login.wxss */
+.user-login .box{
+  background-color: #ffffff;
+  margin: 20px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px 10px;
+  box-shadow: 0 0 5px #d6d6d6;
+}
+.user-login .box .title{
+  color: var(--themeColor);
+  font-weight: 600;
+  font-size: 35rpx;
+  margin-bottom: 20rpx;
+}
+.user-login .box .remember{
+  text-align: left;
+  margin: 15px 20px;
+  font-size: 14px;
+  color: #666666;
+  display: flex;
+}
+/*checkbox 整体大小  */
+.user-login .box .remember checkbox {
+  width: 60rpx;
+  height: 60rpx;
+  
+}
+/*checkbox 选项框大小  */
+.user-login .box .remember checkbox .wx-checkbox-input {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+}
+/*checkbox选中后样式  */
+.user-login .box .remember checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: var(--themeColor);
+}
+/*checkbox选中后图标样式  */
+.user-login .box .remember checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}

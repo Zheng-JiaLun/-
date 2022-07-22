@@ -1,0 +1,47 @@
+<!--components/z-collapse/z-collapse.wxml-->
+<view class='help'>
+  <view class='help_item' wx:for="{{questList}}" wx:key="index">
+    <view class='title' data-index='{{index}}' catchtap='panel'>
+      <view class='title_1'>{{item.questionType}}</view>
+      <view class='title_2'><checkbox value="cb" checked="true"/></view>
+    </view>
+    <view class='detail' style="display:{{ item.t?'':'none'}}">
+     
+      <view wx:for="{{item.questionContent}}" wx:key="indexs" wx:for-index = "indexs" wx:for-item= 'items'
+      
+      >
+        <text class="secondaryTitle" data-index='{{indexs}}' data-index1='{{index}}' catchtap='panel2'>{{indexs+1+'、 '+items.questionName}}</text>
+        <view style="display:{{ items.t?'':'none'}}">
+          <radio-group bindchange="radioChange">
+            <view class="secondary-radio-box">
+              <text>正常</text>
+              <radio  value="{{items.questionId}}" checked="true"/>
+            </view>
+            <view class="secondary-radio-box">
+              <text>待整改</text>
+              <radio  value="{{items.questionId}}"/>
+            </view>
+          </radio-group>
+          <view class="wrapper">
+          <t-upload
+            mediaType="{{['image']}}"
+            files="{{originFiles}}"
+            gridConfig="{{gridConfig}}"
+            config="{{config}}"
+            bind:success="handleSuccess"
+            bind:remove="handleRemove"
+          >
+            <t-icon name="add" size="40rpx" color="rgba(0,0,0,0.26)" />
+          </t-upload>
+        </view>
+        </view>
+        
+        
+        
+        
+        
+      </view>
+      
+    </view>
+  </view>
+</view>

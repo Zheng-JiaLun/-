@@ -1,0 +1,82 @@
+<!--pages/delivery-point/delivery-edit/delivery-edit.wxml-->
+<view class="delivery-edit">
+
+  <view class="item box-shadow">
+    <t-input placeholder="请输入投放点名称" label="slot">
+      <text slot="label">
+        <text style="color: #e34d59">*</text>投放名称
+      </text>
+    </t-input>
+  </view>
+  <view class="item box-shadow">
+    <picker bindchange="bindPickerChange" mode="selector" value="{{index}}" range="{{array}}">
+      <t-input placeholder="请选择投放点类型" disabled="{{true}}" label="slot">
+        <text slot="label">
+          <text style="color: #e34d59">*</text>投放类型
+        </text>
+      </t-input>
+    </picker>
+    
+  </view>
+  <view class="item box-shadow">
+    <picker bindchange="bindPickerChange" mode="selector" value="{{index}}" range="{{array}}">
+      <t-input placeholder="请选择所属区域" disabled="{{true}}" label="slot">
+      <text slot="label">
+        <text style="color: #e34d59">*</text>所属区域
+      </text>
+    </t-input>
+    </picker>
+    
+    <picker bindchange="bindPickerChange" mode="selector" value="{{index}}" range="{{array}}">
+      <t-input placeholder="请选择所属街道" disabled="{{true}}" label="slot">
+        <text slot="label">
+          <text style="color: #e34d59">*</text>所属街道
+        </text>
+      </t-input>
+    </picker>
+    
+    <picker bindchange="bindPickerChange" mode="selector" value="{{index}}" range="{{array}}">
+      <t-input placeholder="请选择所属社区" disabled="{{true}}" label="slot">
+        <text slot="label">
+          <text style="color: #e34d59">*</text>所属社区
+        </text>
+      </t-input>
+    </picker>
+    
+  </view>
+  
+  <view class="item box-shadow">
+    <t-input placeholder="请输入所属小区" label="slot">
+      <text slot="label">
+        <text style="color: #e34d59">*</text>所属小区
+      </text>
+    </t-input>
+    <t-input placeholder="请输入投放点地址" label="投放地址"></t-input>
+  </view>
+  <view class="item box-shadow">
+    
+    <view>
+      <text>定位选择</text>
+      <text>
+        经纬度：{{latitude}},{{longitude}}
+      </text>
+    </view>
+    <map id="myMap" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" bindregionchange="onRegionChange"  style="width: 100%; height: 200px;"></map>
+   
+  </view>
+  <view class="item box-shadow">
+    
+    <t-cell title="是否签定收运合同">
+      <t-switch defaultValue="{{false}}" slot="note" />
+    </t-cell>
+  </view>
+  <view class="item box-shadow">
+    <t-cell title="是否启用">
+      <t-switch defaultValue="{{false}}" slot="note" />
+    </t-cell>
+  </view>
+  <view class="btn-s">
+    {{btnText}}
+  </view>
+ 
+</view>

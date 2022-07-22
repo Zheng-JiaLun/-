@@ -1,0 +1,35 @@
+<!--pages/inspection-module/inspection/inspection.wxml-->
+<view class="inspection">
+  <view class="statistics box-shadow">
+    <view class="item">
+      <text class="blue">1</text>
+      <text>巡查点</text>
+    </view>
+    <view class="item">
+      <text class="blue">1</text>
+      <text>巡查点</text>
+    </view>
+    <view class="item">
+      <text class="blue">1</text>
+      <text>巡查点</text>
+    </view>
+  </view>
+  <view class="screen-box box-shadow">
+    <text>类型查询</text>
+    <text>社区查询</text>
+    <text>状态查询</text>
+    <text class="confirm">确定</text>
+  </view>
+  <view class="box" >
+    <view class="box-shadow item" wx:for="{{list}}" wx:key = 'index' wx:for-index = "index" wx:for-item= 'item' bindtap="intoMsg" data-id="{{item.garbageCanId}}">
+      <view class="left">
+        <text class="name">{{item.garbageCanName}}</text>
+        <text class="address">{{item.address}}</text>
+      </view>
+      <image src="../../../assets/right.png"></image>
+    </view>
+  </view>
+  <view class="btn-box">
+    <view class="btn-s" bindtap="addMsg">添加巡查</view>
+  </view>
+</view>

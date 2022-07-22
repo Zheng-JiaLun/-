@@ -1,0 +1,15 @@
+<!--pages/user-module/user.wxml-->
+
+<view class="user">
+  <view class="user-box">
+    <t-cell title="用户名" hover note="{{userMsg.userName}}" />
+    <t-cell title="姓名" hover note="{{userMsg.compellation}}" />
+    <t-cell title="联系方式" hover note="{{userMsg.phoneNumber}}" />
+    <t-cell title="用户类型" hover note="{{userMsg.userType}}" />
+    <t-cell title="所属区域" hover note="{{userMsg.areaName}}" />
+    <t-cell title="所属街道" hover note="{{userMsg.streetName}}" />
+    <t-cell title="所属社区" hover note="{{userMsg.communityName}}" />
+    <t-cell title="所属小区" hover note="{{userMsg.housingEstate}}" />
+  </view>
+  <view class="btn-s" bindtap="loginOut">退出登录</view>
+</view>
